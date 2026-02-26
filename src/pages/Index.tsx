@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Scan, ShoppingBag, Leaf, Recycle, TrendingUp, ArrowRight } from "lucide-react";
+import rosiLogo from "@/assets/rosi-logo.png";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
@@ -48,7 +49,7 @@ const HomePage = () => {
     <div className="px-4 pt-6 space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">🌱</span>
+          <img src={rosiLogo} alt="ROSi Logo" className="w-10 h-10" />
           <h1 className="text-2xl font-extrabold text-foreground">ROSi</h1>
         </div>
         {user && (
