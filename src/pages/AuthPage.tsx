@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { motion } from "framer-motion";
-import { Leaf, Mail, Lock, User, Eye, EyeOff } from "lucide-react";
+import { Mail, Lock, User, Eye, EyeOff } from "lucide-react";
+import rosiLogo from "@/assets/rosi-logo.png";
 import { toast } from "sonner";
 
 const AuthPage = () => {
@@ -52,9 +53,7 @@ const AuthPage = () => {
       >
         {/* Logo */}
         <div className="text-center space-y-2">
-          <div className="w-16 h-16 rosi-gradient rounded-2xl flex items-center justify-center mx-auto">
-            <Leaf className="w-8 h-8 text-primary-foreground" />
-          </div>
+          <img src={rosiLogo} alt="ROSi Logo" className="w-20 h-20 mx-auto" />
           <h1 className="text-3xl font-extrabold text-foreground">ROSi</h1>
           <p className="text-sm text-muted-foreground">
             {isLogin ? "Masuk ke akun kamu" : "Buat akun baru"}
